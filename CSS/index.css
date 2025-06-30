@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-image: url(../Utils/Background.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 70px 0;
+  padding: 0 30px;
+}
+
+.child1,
+.child2 {
+  height: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.child1_1 {
+  background-color: blanchedalmond;
+  /* border: 2px solid; */
+  width: 350px;
+  margin: 0 150px;
+  height: 57vh;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px black;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.tilt1,
+.tilt2,
+.tilt3 {
+  position: relative;
+  font-size: x-large;
+  font-weight: 700;
+  /* border: 2px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  margin: 20px 0;
+  border-radius: 20px;
+  transform: rotateY(-230deg) rotateX(20deg);
+}
+
+.tilt1:hover,
+.tilt2:hover,
+.tilt3:hover {
+  transform: rotate(0);
+}
+
+.tilt1 {
+  background-color: rgb(249, 112, 62);
+}
+
+.tilt2 {
+  background-color: rgb(248, 214, 23);
+}
+
+.tilt3 {
+  background-color: rgb(250, 193, 107);
+}
+
+.image > img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}
+
+.text {
+  transform: rotateY(180deg);
+}
