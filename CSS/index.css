@@ -11,15 +11,37 @@ body {
   background-image: url(../Utils/Background.gif);
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0 50px;
+  padding-top: 150px;
 }
 
 .parent {
-  width: 100%;
+  width: 99%;
   height: auto;
   display: flex;
   justify-content: center;
-  margin: 70px 0;
   padding: 0 30px;
+  overflow: hidden;
+}
+
+.flip_card {
+  perspective: 1000px;
+  width: 350px;
+  margin: 0 150px;
+  overflow: hidden;
+  height: 63vh;
+}
+
+.flip_card_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip_card:hover .flip_card_inner {
+  transform: rotateY(180deg);
 }
 
 .child1,
@@ -29,15 +51,30 @@ body {
   text-align: center;
 }
 
-.child1_1 {
-  background-color: blanchedalmond;
-  /* border: 2px solid; */
-  width: 350px;
-  margin: 0 150px;
-  height: 57vh;
+.child1_1,
+.child1_2 {
+  /* border: 1px solid; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 5px 15px black;
+  backface-visibility: hidden;
+}
+
+.child1_1 {
+  background-color: blanchedalmond;
+}
+
+.child1_2 {
+  transform: rotateY(180deg);
+}
+
+.child1_2 > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 h3 {
@@ -61,15 +98,39 @@ h6 {
   align-items: center;
   justify-content: space-evenly;
   height: 150px;
+  width: 750px;
   margin: 20px 0;
   border-radius: 20px;
-  transform: rotateY(-230deg) rotateX(20deg);
+  transform: rotateY(-230deg) rotateX(15deg);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.tilt1 {
+  right: 90px;
+}
+
+.tilt2 {
+  top: -15px;
+  right: 45px;
+}
+
+.tilt3 {
+  top: -30px;
 }
 
 .tilt1:hover,
 .tilt2:hover,
 .tilt3:hover {
+  width: 600px;
   transform: rotate(0);
+}
+
+.tilt1:hover .text,
+.tilt2:hover .text,
+.tilt3:hover .text {
+  transform: rotateY(0);
 }
 
 .tilt1 {
@@ -85,12 +146,35 @@ h6 {
 }
 
 .image > img {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  height: 120px;
-  width: 120px;
+  height: 130px;
+  width: 130px;
   object-fit: cover;
+}
+
+.image > img:hover {
+  scale: 1.1;
 }
 
 .text {
   transform: rotateY(180deg);
+}
+
+.btn {
+  margin: 10px 0;
+  margin-left: 213px;
+  width: 215px;
+  height: 40px;
+  padding: 3px 0;
+  border-radius: 15px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  background-color: blanchedalmond;
+}
+
+.btn:hover {
+  scale: 1.05;
+  transition: all 0.5s ease-in-out;
 }
