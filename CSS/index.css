@@ -246,18 +246,17 @@ h6 {
 
 @media (min-width: 321px) and (max-width: 480px) {
   body {
-    padding: 0 20px;
+    padding: 0;
     padding-top: 30px;
   }
   .parent {
     flex-direction: column;
-    gap: 30px;
   }
   .flip_card {
     width: 100%;
     margin: 0;
     padding: 30px 0;
-    height: 87vh;
+    height: 78vh;
   }
   .btn {
     margin: 0;
@@ -268,10 +267,13 @@ h6 {
     height: inherit;
     object-fit: fill;
   }
+  .child2 {
+    padding: 0 15px;
+  }
   .tilt1,
   .tilt2,
   .tilt3 {
-    margin: 20px -50px;
+    margin: 20px -95px;
     width: 450px;
     position: relative;
     top: 0;
@@ -289,6 +291,11 @@ h6 {
     width: 330px;
     margin: 0;
     font-size: larger;
+  }
+  .tilt1:hover,
+  .tilt2:hover,
+  .tilt3:hover {
+    margin: 0 -35px;
   }
   .child1,
   .child2 {
