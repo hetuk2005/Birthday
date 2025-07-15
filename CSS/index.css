@@ -32,6 +32,8 @@ body {
   margin: 30px 150px;
   overflow: hidden;
   height: 60vh;
+  border-radius: 20px;
+  position: relative;
 }
 
 .flip_card_inner {
@@ -65,6 +67,7 @@ body {
 }
 
 .child1_1 {
+  padding: 50px 20px;
   background-color: blanchedalmond;
 }
 
@@ -174,7 +177,7 @@ h6 {
   width: 215px;
   height: 40px;
   padding: 5px 0;
-  border-radius: 15px;
+  border-radius: 7px;
   text-align: center;
   font-size: large;
   font-weight: bold;
@@ -202,15 +205,15 @@ h6 {
     width: 100%;
     margin: 0;
     padding: 30px 0;
-    height: 88vh;
+    height: 80vh;
   }
   .btn {
     margin: 0;
     width: 100%;
   }
   .child1_2 > img {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     object-fit: fill;
   }
   .tilt1,
@@ -255,16 +258,16 @@ h6 {
   .flip_card {
     width: 100%;
     margin: 0;
-    padding: 30px 0;
-    height: 78vh;
+    padding: 11px 0;
+    height: 82vh;
   }
   .btn {
     margin: 0;
     width: 100%;
   }
   .child1_2 > img {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     object-fit: fill;
   }
   .child2 {
@@ -318,7 +321,7 @@ h6 {
     margin: 15px 0;
     margin-left: 150px;
     padding: 30px 0;
-    height: 75vh;
+    height: 45vh;
   }
   .btn {
     margin: 0;
@@ -356,7 +359,7 @@ h6 {
     margin: 15px 0;
     margin-left: 250px;
     padding: 30px 0;
-    height: 57vh;
+    height: 65vh;
   }
   .btn {
     margin: 0;
