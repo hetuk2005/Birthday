@@ -9,15 +9,20 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  display: flex;
+  height: 90vh;
   overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 45px;
 }
 
 .slider {
   position: relative;
-  top: 170px;
-  left: 150px;
+  top: 140px;
+  left: 600px;
   width: 300px;
   height: 300px;
   transform-style: preserve-3d;
@@ -52,4 +57,39 @@ span > img {
   top: 0;
   left: 0;
   transition: 2s;
+  backface-visibility: hidden; /* Dosen't Flicker */
+}
+
+.slider:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border: 4px solid white;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
 }

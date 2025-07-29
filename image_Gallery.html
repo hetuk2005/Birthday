@@ -1,70 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Birthday Gift Image Gallery</title>
-        <link rel="stylesheet" href="./CSS/image_Gallery.css">
-    </head>
-    <body>
-        <h1>Happy Birthday Khushi</h1>
-        <div class="slider">
-            <span><img src="./Utils/Image-1.jpg" alt="Image-1"
-                    style="--i:1"></span>
-            <span><img src="./Utils/Image-2.jpg" alt="Image-2"
-                    style="--i:2"></span>
-            <span><img src="./Utils/Image-3.jpg" alt="Image-1"
-                    style="--i:3"></span>
-            <span><img src="./Utils/Image-4.jpg" alt="Image-1"
-                    style="--i:4"></span>
-            <span><img src="./Utils/Image-5.jpg" alt="Image-1"
-                    style="--i:5"></span>
-            <span><img src="./Utils/Image-6.jpg" alt="Image-1"
-                    style="--i:6"></span>
-            <span><img src="./Utils/Image-7.jpg" alt="Image-1"
-                    style="--i:7"></span>
-            <span><img src="./Utils/Image-8.jpg" alt="Image-1"
-                    style="--i:8"></span>
-            <span><img src="./Utils/Image-9.jpg" alt="Image-1"
-                    style="--i:9"></span>
-            <span><img src="./Utils/Image-10.jpg" alt="Image-1"
-                    style="--i:10"></span>
-            <span><img src="./Utils/Image-11.jpg" alt="Image-1"
-                    style="--i:11"></span>
-            <span><img src="./Utils/Image-12.jpg" alt="Image-1"
-                    style="--i:12"></span>
-            <span><img src="./Utils/Image-13.jpg" alt="Image-1"
-                    style="--i:13"></span>
-            <span><img src="./Utils/Image-14.jpg" alt="Image-1"
-                    style="--i:14"></span>
-            <span><img src="./Utils/Image-15.jpg" alt="Image-1"
-                    style="--i:15"></span>
-            <span><img src="./Utils/Image-16.jpg" alt="Image-1"
-                    style="--i:16"></span>
-            <span><img src="./Utils/Image-17.jpg" alt="Image-1"
-                    style="--i:17"></span>
-            <span><img src="./Utils/Image-18.jpg" alt="Image-1"
-                    style="--i:18"></span>
-            <span><img src="./Utils/Image-19.jpg" alt="Image-1"
-                    style="--i:19"></span>
-            <span><img src="./Utils/Image-20.jpg" alt="Image-1"
-                    style="--i:20"></span>
-            <span><img src="./Utils/Image-21.jpg" alt="Image-1"
-                    style="--i:21"></span>
-            <span><img src="./Utils/Image-22.jpg" alt="Image-1"
-                    style="--i:22"></span>
-            <span><img src="./Utils/Image-23.jpg" alt="Image-1"
-                    style="--i:23"></span>
-            <span style="--i:24"><img src="./Utils/Image-24.jpg"
-                    alt="Image-1"></span>
-            <span style="--i:25"><img src="./Utils/Image-25.jpg"
-                    alt="Image-1"></span>
-            <span style="--i:26"><img src="./Utils/Image-26.jpg"
-                    alt="Image-1"></span>
-            <span style="--i:27"><img src="./Utils/Image-27.jpg"
-                    alt="Image-1"></span>
-            <span style="--i:28"><img src="./Utils/Image-28.png"
-                    alt="Image-1"></span>
-        </div>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <title>Birthday Gift Image Gallery</title>
+    <link rel="stylesheet" href="./CSS/image_Gallery.css">
+  </head>
+  <body>
+    <h1>Happy Birthday Khushi</h1>
+    <div class="slider">
+      <span style="--i:1"><img src="./Utils/Image-1.jpg"
+          alt="Image-1"></span>
+      <span style="--i:2"><img src="./Utils/Image-2.jpg"
+          alt="Image-2"></span>
+      <span style="--i:3"><img src="./Utils/Image-3.jpg"
+          alt="Image-3"></span>
+      <span style="--i:4"><img src="./Utils/Image-4.jpg"
+          alt="Image-4"></span>
+      <span style="--i:5"><img src="./Utils/Image-5.jpg"
+          alt="Image-5"></span>
+      <span style="--i:6"><img src="./Utils/Image-6.jpg"
+          alt="Image-6"></span>
+      <span style="--i:7"><img src="./Utils/Image-7.png"
+          alt="Image-7"></span>
+      <span style="--i:8"><img src="./Utils/Image-8.png"
+          alt="Image-8"></span>
+    </div>
+    <div class="lightbox" id="lightbox">
+      <span class="close" id="closeBtn">&times;</span>
+      <img id="lightboxImage" alt="Full View" />
+    </div>
+
+  </body>
+  <script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const closeBtn = document.getElementById("closeBtn");
+
+  // Open image in fullscreen
+  document.querySelectorAll(".slider img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImage.src = img.src;
+    });
+  });
+
+  // Close fullscreen on close button
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  // Optional: Close on ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
 </html>

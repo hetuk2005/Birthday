@@ -16,6 +16,11 @@ body {
   width: 100%;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .parent {
   width: 100%;
   height: auto;
@@ -93,7 +98,7 @@ h6 {
 }
 
 .rotate {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .tilt1,
