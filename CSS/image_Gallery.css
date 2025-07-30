@@ -24,7 +24,7 @@ h1 {
   top: 140px;
   left: 600px;
   width: 300px;
-  height: 300px;
+  height: 330px;
   transform-style: preserve-3d;
   animation: rotate 10s linear infinite;
 }
@@ -46,13 +46,14 @@ span {
   position: absolute;
   top: 0;
   left: 0;
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(360px);
 }
 
 span > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   position: absolute;
   top: 0;
   left: 0;
@@ -92,4 +93,48 @@ span > img {
   font-size: 40px;
   color: white;
   cursor: pointer;
+}
+
+@media (max-width: 320px) {
+  body {
+    background-size: auto;
+    background-position: inherit;
+  }
+  h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+  }
+  .slider {
+    width: 150px;
+    height: 170px;
+    left: 100px;
+  }
+  span {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(180px);
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  .slider {
+    top: 80px;
+    left: 135px;
+    width: 200px;
+    height: 220px;
+  }
+  span {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(240px);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1400px) {
+  .slider {
+    left: 310px;
+    width: 300px;
+    height: 350px;
+  }
+  span {
+    top: 5px;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(360px);
+  }
 }
